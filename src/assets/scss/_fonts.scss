@@ -1,0 +1,122 @@
+//@import 'variables';
+
+// font colors
+.primary-color {
+    color: $var-primary;
+}
+
+.secondary-color {
+    color: $var-secondary;
+}
+
+.additional-color {
+    color: $var-additional;
+}
+
+// font sizes for text 
+.fs-sm {
+    font-size: $var-small;
+}
+
+.fs-md {
+    font-size: $var-normal;
+}
+
+.fs-lg {
+    font-size: $var-big;
+}
+
+// font sizes for heading
+.hfs-sm {
+    font-size: $var-heading-small;
+}
+
+.hfs-md {
+    font-size: $var-heading-normal;
+}
+
+.hfs-lg {
+    font-size: $var-heading-big;
+}
+
+
+// Property for text
+@mixin text-property-sm {
+    line-height: $var-height-line-small;
+    font-size: $var-small;
+    font-weight: $var-weight;
+}
+
+@mixin text-property-md {
+    line-height: $var-height-line-normal;
+    font-size: $var-normal;
+    font-weight: $var-weight;
+}
+
+@mixin text-property-lg {
+    line-height: $var-height-line-big;
+    font-size: $var-big;
+    font-weight: $var-weight;
+}
+
+// Property for headings
+@mixin heading-property-sm {
+    line-height: $var-height-line-small;
+    font-size: $var-heading-small;
+    font-weight: $var-heading-weight-small;
+}
+
+@mixin heading-property-md {
+    line-height: $var-height-line-normal;
+    font-size: $var-heading-normal;
+    font-weight: $var-heading-weight-big;
+}
+
+@mixin heading-property-lg {
+    line-height: $var-height-line-big;
+    font-size: $var-heading-big;
+    font-weight: $var-heading-weight-big;
+}
+
+// Breakpoints
+@media screen and (max-width: $media-sm) {
+    .text {
+        @include text-property-sm;
+    }
+
+    .heading {
+        @include heading-property-sm;
+    }
+}
+
+@media screen and (max-width: $media-md) {
+    .text {
+        @include text-property-md;
+    }
+
+    .heading {
+        @include heading-property-md;
+    }
+}
+
+@media screen and (max-width: $media-lg) {
+    .text {
+        @include text-property-lg;
+    }
+
+    .heading {
+        @include heading-property-lg;
+    }
+}
+
+@media screen and (max-width: $media-xl) {
+    .text {
+        @include text-property-lg;
+    }
+
+    .heading {
+        @include heading-property-lg;
+    }
+}
+
+

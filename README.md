@@ -1,5 +1,9 @@
 # zadanie-rekrutacyjne-futurum-technology-ltd
 
+## Description
+
+Project build with Vue 2, SASS, Vue Router and Vuex
+
 ## Project setup
 ```
 npm install
