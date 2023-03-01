@@ -1,25 +1,45 @@
-//@import 'variables';
-
 // btn colors
 .btn-primary {
     background-color: $var-primary;
     color: $var-white;
+
+    &:hover {
+        cursor: pointer;
+        background-color: darken($var-primary, 10%);
+    }
 }
 
 .btn-secondary {
     background-color: $var-secondary;
     color: $var-dark;
+
+    &:hover {
+        cursor: pointer;
+        background-color: darken($var-secondary, 10%);
+    }
 }
 
 .btn-additional {
     background-color: $var-additional;
     color: $var-dark;
+
+    &:hover {
+        cursor: pointer;
+        background-color: darken($var-additional, 10%);
+    }
+}
+
+.btn {
+    transition: background-color .2s ease-in;
+    border: none;
+    outline: none;
 }
 
 @mixin btn-property($font-size, $margin, $padding-x, $padding-y) {
     font-size: $font-size;
     margin: $margin;
     padding: $padding-y $padding-x; 
+    border-radius: 4px;
 }
 
 // Breakpoints
@@ -31,24 +51,24 @@
 
 @media screen and (min-width: ($media-sm + 1)) and (max-width: $media-md) {
     .btn {
-        @include btn-property($var-normal, $var-space-small, $var-space-small, ($var-space-small - 4px));
+        @include btn-property($var-small, $var-space-small, $var-space-small, ($var-space-small - 4px));
     }
 }
 
 @media screen and (min-width: ($media-md + 1)) and (max-width: $media-lg) {
     .btn {
-        @include btn-property($var-big, $var-space-small, $var-space-normal, ($var-space-normal / 2));
+        @include btn-property($var-small, $var-space-small, $var-space-small, calc($var-space-normal / 4));
     }
 }
 
 @media screen and (min-width: ($media-lg + 1)) and (max-width: $media-xl) {
     .btn {
-        @include btn-property($var-big, $var-space-small, $var-space-normal, ($var-space-normal / 2));
+        @include btn-property($var-normal, $var-space-small, $var-space-small, calc($var-space-normal / 4));
     }
 }
 
 @media screen and (min-width: ($media-xl + 1)) {
     .btn {
-        @include btn-property($var-big, $var-space-small, $var-space-normal, ($var-space-big / 3));
+        @include btn-property($var-normal, $var-space-small, $var-space-normal, calc($var-space-normal / 2));
     }
 }

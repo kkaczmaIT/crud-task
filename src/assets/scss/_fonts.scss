@@ -1,42 +1,58 @@
-//@import 'variables';
-
 // font colors
 .primary-color {
-    color: $var-primary;
+    color: $var-primary !important;
 }
 
 .secondary-color {
-    color: $var-secondary;
+    color: $var-secondary !important;
 }
 
 .additional-color {
-    color: $var-additional;
+    color: $var-additional !important;
+}
+
+.white-color {
+    color: #fff !important;
 }
 
 // font sizes for text 
 .fs-sm {
-    font-size: $var-small;
+    font-size: $var-small !important;
 }
 
 .fs-md {
-    font-size: $var-normal;
+    font-size: $var-normal !important;
 }
 
 .fs-lg {
-    font-size: $var-big;
+    font-size: $var-big !important;
 }
 
 // font sizes for heading
 .hfs-sm {
-    font-size: $var-heading-small;
+    font-size: $var-heading-small !important;
 }
 
 .hfs-md {
-    font-size: $var-heading-normal;
+    font-size: $var-heading-normal !important;
 }
 
 .hfs-lg {
-    font-size: $var-heading-big;
+    font-size: $var-heading-big !important;
+}
+
+// font weight
+
+.fw-sm {
+    font-weight: $var-heading-weight-small !important;
+}
+
+.fw-md {
+    font-weight: $var-weight !important;
+}
+
+.fw-lg {
+    font-weight: $var-heading-weight-big !important;
 }
 
 
@@ -63,19 +79,19 @@
 @mixin heading-property-sm {
     line-height: $var-height-line-small;
     font-size: $var-heading-small;
-    font-weight: $var-heading-weight-small;
+    font-weight: $var-heading-weight-big;
 }
 
 @mixin heading-property-md {
     line-height: $var-height-line-normal;
     font-size: $var-heading-normal;
-    font-weight: $var-heading-weight-big;
+    font-weight: $var-heading-weight-small;
 }
 
 @mixin heading-property-lg {
     line-height: $var-height-line-big;
     font-size: $var-heading-big;
-    font-weight: $var-heading-weight-big;
+    font-weight: $var-heading-weight-small;
 }
 
 // Breakpoints
@@ -89,7 +105,7 @@
     }
 }
 
-@media screen and (max-width: $media-md) {
+@media screen and (min-width: ($media-sm + 1)) and (max-width: $media-md) {
     .text {
         @include text-property-md;
     }
@@ -99,7 +115,7 @@
     }
 }
 
-@media screen and (max-width: $media-lg) {
+@media screen and (min-width: ($media-md + 1)) and (max-width: $media-lg) {
     .text {
         @include text-property-lg;
     }
@@ -109,7 +125,7 @@
     }
 }
 
-@media screen and (max-width: $media-xl) {
+@media screen and (min-width: ($media-lg + 1)) {
     .text {
         @include text-property-lg;
     }

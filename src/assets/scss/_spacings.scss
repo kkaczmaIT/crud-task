@@ -1,0 +1,43 @@
+$spacings: (1: $var-space-small, 2: $var-space-normal, 3: $var-space-big);
+
+    @each $n, $spacing in $spacings {
+        // Margins
+        .m-#{$n} {
+            margin: #{$spacing};
+        }
+        .mr-#{$n} {
+            margin-right: #{$spacing};
+        }
+    
+        .ml-#{$n} {
+            margin-left: #{$spacing};
+        }
+    
+        .mb-#{$n} {
+            margin-bottom: #{$spacing};
+        }
+    
+        .mt-#{$n} {
+            margin-top: #{$spacing};
+        }
+
+        // Paddings
+        .p-#{$n} {
+            padding: #{$spacing};
+        }
+        .pr-#{$n} {
+            padding-right: #{$spacing};
+        }
+    
+        .pl-#{$n} {
+            padding-left: #{$spacing};
+        }
+    
+        .pb-#{$n} {
+            padding-bottom: #{$spacing};
+        }
+    
+        .pt-#{$n} {
+            margin-top: #{$spacing};
+        }
+    }

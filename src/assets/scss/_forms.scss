@@ -1,0 +1,144 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 5% 3%;
+    width: 94%;
+    justify-self: center;
+    background-color: $var-primary;
+    border-radius: 8px;
+
+    .form-input-group {
+        background-color: lighten($var-additional, 0%);
+        color: $var-dark;
+        display: flex;
+        width: 74%;
+        padding: 4%;
+        border-radius: 5px;
+        margin: 3% 10%;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        
+        .form-label {
+            width: 100%;
+            font-size: $var-normal;
+            font-weight: $var-weight;
+            margin-bottom: 3%;
+            margin-left: -3%;
+        }
+    
+        .form-input {
+            width: 100%;
+            border-radius: 5px;
+            padding: 5px 8px;
+            border: solid 3px darken($var-additional, 5%);
+            background-color: $var-secondary;
+            color: darken($var-primary, 10%);
+            &:focus {
+                border: solid 3px darken($var-additional, 15%);
+                background-color: darken($var-secondary, 5%);
+                outline: none;
+            }
+        }
+
+        .form-select {
+            width: 100%;
+            border-radius: 5px;
+            padding: 5px 8px;
+            border: solid 3px darken($var-additional, 5%);
+            background-color: $var-secondary;
+            color: darken($var-primary, 10%);
+            &:focus {
+                border: solid 3px darken($var-additional, 15%);
+                background-color: darken($var-secondary, 5%);
+                outline: none;
+            }
+
+            option {
+                color: darken($var-primary, 10%);
+                background-color: $var-secondary;
+            }
+
+        }
+
+        .form-check-group {
+            width: 100%;
+
+            .form-check-label {
+                font-size: $var-small;
+            }
+        }
+
+    }
+   
+}
+
+@media screen and (min-width: ($media-sm + 1))
+{
+    .form {
+        padding: 5% 3%;
+        width: 94%;
+    
+        .form-input-group {
+            width: 74%;
+            padding: 4%;
+            border-radius: 5px;
+            margin: 3% 10%;
+            
+            .form-label {
+                width: 100%;
+                margin-bottom: 3%;
+                margin-left: -3%;
+            }
+        
+            .form-input {
+                width: 100%;
+                border-radius: 5px;
+                padding: 5px 8px;
+
+            }
+    
+            .form-select {
+                width: 100%;
+                padding: 5px 8px;
+            }
+    
+        }
+       
+    }
+}
+
+@media screen and (max-width: $media-sm) {
+    .form {
+        padding: 5% 3%;
+        width: 94%;
+        border-radius: 8px;
+    
+        .form-input-group {
+            width: 74%;
+            padding: 4% 6%;
+            border-radius: 5px;
+            margin: 3% 10%;
+            
+            .form-label {
+                width: 100%;
+                margin-bottom: 3%;
+                margin-left: -3%;
+            }
+        
+            .form-input {
+                width: 100%;
+                border-radius: 5px;
+                padding: 5px 8px;
+
+            }
+    
+            .form-select {
+                width: 100%;
+                padding: 5px 8px;
+            }
+    
+        }
+       
+    }
+}
