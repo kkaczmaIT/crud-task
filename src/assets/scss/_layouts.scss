@@ -190,3 +190,20 @@ $spacings: (1: $var-space-small, 2: $var-space-normal, 3: $var-space-big);
   
     }
 }
+
+// Footer
+
+.footer-primary {
+    background-color: $var-primary;
+    color: $var-white;
+}
+
+.footer-secondary {
+    background-color: $var-secondary;
+    color: $var-dark;
+}
+
+.footer-additional {
+    background-color: $var-additional;
+    color: $var-dark;
+}

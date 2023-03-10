@@ -5,18 +5,22 @@
             <div class="form-input-group">
                 <label for="campaignNameInput" class="form-label">Campaign name</label>
                 <input type="text" class="form-input" id="campaignNameInput" placeholder="Enter campaign name" required>
+                <div id="campaignNameError" class="error-message"></div>
             </div>
             <div class="form-input-group">
                 <label for="keywordsInput" class="form-label">Keywords of product</label>
                 <input type="text" class="form-input" id="keywordsInput" placeholder="Enter keywords" required>
+                <div id="campaignKeywordsError" class="error-message"></div>
             </div>
             <div class="form-input-group">
                 <label for="bidAmountInput" class="form-label">Amount</label>
                 <input type="number" class="form-input" id="bidAmountInput" placeholder="Enter bid amount" required>
+                <div id="campaignBidAmountError" class="error-message"></div>
             </div>
             <div class="form-input-group">
                 <label for="campaignFundInput" class="form-label"></label>
                 <input type="number" class="form-input" id="campaignFundInput" placeholder="Enter campaign fund" required>
+                <div id="campaignFundError" class="error-message"></div>
             </div>
             <div class="form-input-group">
                 <label class="form-label">Status</label>
@@ -25,6 +29,7 @@
                     <label class="form-check-label" for="statusInput">
                         On 
                     </label>
+                    <div id="campaignStatusError" class="error-message"></div>
                 </div>
             </div>
             <div class="form-input-group">
@@ -37,11 +42,13 @@
                     <option value="Los Angeles" />
                     <option value="Chicago" />
                 </datalist>
+                <div id="campaignTownsError" class="error-message"></div>
             </div>
 
             <div class="form-input-group">
                 <label for="radiusAmountInput" class="form-label">Radius (in kilometers)</label>
                 <input type="number" class="form-input" id="radiusAmountInput" placeholder="Enter radius (km)" required>
+                <div id="campaignRadiusAmountError" class="error-message"></div>
             </div> 
 
             <!-- <div class="form-input-group">
